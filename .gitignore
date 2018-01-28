@@ -1,3 +1,9 @@
 .DS_Store
 *.log
-/storage
+/storage/app/media
+/storage/app/uploads/public
+/storage/cms/cache
+/storage/cms/twig
+/storage/framework/cache
+/storage/framework/sessions
+/storage/temp/public

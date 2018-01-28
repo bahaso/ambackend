@@ -1,0 +1,14 @@
+1. Run on PHP7
+2. Make sure ./storage/cms/combiner folder exist, with structure of:
+
+- ./storage/cms/combiner
+
+3. run "php artisan october:up"
+4. access backend url - "dashboard":
+
+./[folder_name]/dashboard
+
+4. user credential is:
+
+username: admin
+password: admin
