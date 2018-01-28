@@ -1,0 +1,46 @@
+title = "News Post"
+url = "/news/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+==
+
+{% partial '_partials/_breadcrumb.htm' %}
+
+{% set post = blogPost.post %}
+
+{% put layout_page %}
+	<section class="wysiwyg">
+	    <h1 class="title fw600">
+            {{ post.title }}
+	    </h1>
+	    <div class="content">
+			{% if post.featured_images.count %}
+			    <div class="featured-images text-center">
+			        {% for image in post.featured_images %}
+		                <img
+		                    data-src="{{ image.filename }}"
+		                    src="{{ image.path }}"
+		                    alt="{{ image.description }}"
+		                    style="width: 100%;height:auto;margin-bottom:20px;" />
+			        {% endfor %}
+			    </div>
+			{% endif %}
+	        <p class="no-mb txt-bold">
+	            {{ post.published_at|date('M d, Y') }}
+	        </p>
+
+			{{ post.content_html|raw }}
+
+	    </div>
+	</section>
+{% endput %}
+
+{% partial 'sidebar/media' %}
+
+{% partial '_partials/_sidebar-navigation' %}
+
+{% partial '_partials/_sponsors.htm' custClass="bg-secondary" %}

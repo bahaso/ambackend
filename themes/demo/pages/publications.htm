@@ -1,0 +1,89 @@
+title = "Publications"
+url = "/publications"
+layout = "default"
+is_hidden = 0
+
+[builderList]
+modelClass = "Civira\Publications\Models\Publication"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "publications-post"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+{% partial '_partials/_breadcrumb.htm' %}
+
+{% put layout_page %}
+    <section class="wysiwyg">
+        <h1 class="title fw600 no-mb">
+            Press Releases
+        </h1>
+        <div class="content">
+            <table class="table am2018">
+                <thead>
+                <tr>
+                    <th width="20%">Date</th>
+                    <th>Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for record in records if record.category == 'publications' %}
+                        <tr>
+                            <td>{{ record.date }}</td>
+                            <td>
+                                {# Use spaceless tag to remove spaces inside the A tag. #}
+                                {% spaceless %}
+                                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
+
+                                        {{ attribute(record, displayColumn) }}
+                                        
+                                        </a>
+                                {% endspaceless %}
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr class="no-data">
+                            <td colspan="2">{{ noRecordsMessage }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            {% if records.lastPage > 1 %}
+                <ul class="pagination">
+                    {% if records.currentPage > 1 %}
+                        <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
+                    {% endif %}
+
+                    {% for page in 1..records.lastPage %}
+                        <li class="{{ records.currentPage == page ? 'active' : null }}">
+                            <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                        </li>
+                    {% endfor %}
+
+                    {% if records.lastPage > records.currentPage %}
+                        <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+
+        </div>
+
+    </section>
+
+{% endput %}
+
+{% partial 'sidebar/media' %}
+
+{% partial '_partials/_sidebar-navigation' %}
+
+{% partial '_partials/_sponsors.htm' custClass="bg-secondary" %}

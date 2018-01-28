@@ -1,0 +1,78 @@
+title = "Publications Post"
+url = "/publications/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Civira\Publications\Models\Publication"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% partial '_partials/_breadcrumb.htm' %}
+
+{% put layout_page %}
+
+<section class="wysiwyg">
+    <h1 class="title fw600 no-mb">
+    </h1>
+    <div class="content">
+        <table class="table am2018 hr">
+            <tbody>
+                <tr>
+                    <th width="20%">Title</td>
+                    <td>
+                        {{ record.title }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Event</td>
+                    <td>
+                		{{ record.event }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Date</td>
+                    <td>
+                        {{ record.date }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Source</td>
+                    <td>
+                        {{ record.source }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Description</td>
+                    <td>
+                    	{{ record.description|raw }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Attachment</td>
+                    <td>
+                        <a href="{{ record.datafile.path }}" class="txt-underline">
+                            {{ record.datafile.filename }}
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ record.datafile.path }}" class="pull-right fw400 link-txt fs14">
+            Download Attachment
+        </a>
+    </div>
+</section>
+
+{% endput %}
+
+{% partial 'sidebar/media' %}
+
+{% partial '_partials/_sidebar-navigation' %}

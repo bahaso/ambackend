@@ -1,0 +1,160 @@
+.element-to-be-covered{
+	height: 720px;
+}
+
+.logo{
+	max-height: 170%;
+	margin-top: -20px;
+}
+
+.nav-bar{
+	height: 100px !important;
+	max-height: 100px !important;
+}
+
+.bg-footer{
+	background: #0099ff;
+	color: white;
+	padding: 20px;
+}
+
+.bg-footer a, .white{
+	color: white;
+}
+
+input{
+	color: black;
+}
+
+.button-tabs .active .tab-title, .button-tabs .active .tab-title:hover{
+	background: #0099ff;
+}
+
+.img-detail{
+	height: 200px;
+	width: 200px;
+}
+
+.tile-left, .tile-right{
+	min-width: 250px;
+	min-height: 200px;
+	width: inherit;
+	text-align: left;	
+}
+
+section{
+	padding: 30px;
+}
+
+footer{
+	padding: 30px;
+}
+
+.num_followers{
+	font-size: 13pt;
+	color: #666 !important;
+	font-weight: bold;
+}
+
+.separator{
+	border-color: white !important;
+	margin-top: 15px !important;
+}
+
+.header_title{
+    font-size: 18pt !important;
+    line-height: 25pt !important;
+}
+
+.list-inline{
+	display: inline;
+}
+
+.blue{
+	color: #0099ff;
+}
+
+.black{
+	color: black;
+}
+
+.newsletter{
+	padding-right: 0;
+}
+
+.btn-newsletter{
+	padding-left: 0;
+}
+
+.btn-newsletter > .btn-lg{
+	min-width: 80px;
+	background: #0099ff;
+}
+
+.btn-newsletter > .btn{
+	border-color: #0099ff;
+}
+
+.under_title{
+	height: .25rem;
+	width: 5%;
+	margin:0;
+	background: orange;
+	border:	none;
+}
+
+.section_blue{
+	background-color: #0099ff !important;
+	color: white;
+}
+
+.section_blue_cloud{
+	background-image: url('../img/background_cloud_blue.png');
+	color: white;
+	height: 350px;
+
+	margin-top: -10px
+}
+
+.section_blue_light{
+	background-color: #33cccc !important;
+	color: white;
+}
+
+.section_blue_light_cloud{
+	background-image: url('../img/background_cloud_blue_light.png');
+	color: white;
+	height: 350px;
+}
+
+.uppercase{
+	font-weight: 600;
+}
+
+.big_number{
+	font-size: 40pt;
+	font-weight: bold;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.panel-body{
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.caption_title{
+	font-size: 20pt;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.img-home{
+	height: 300px;
+}
+
+.img-placeholder{
+	width: 250px;
+	height: 250px;
+}

@@ -1,0 +1,43 @@
+fields:
+    title_short:
+        label: 'Title Menu List'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    title:
+        label: 'Title Content'
+        oc.commentPosition: ''
+        span: left
+        type: text
+    event:
+        label: Event
+        oc.commentPosition: ''
+        span: left
+        type: text
+    source:
+        label: Source
+        oc.commentPosition: ''
+        span: left
+        type: text
+    date:
+        label: Date
+        oc.commentPosition: ''
+        mode: date
+        span: left
+        type: datepicker
+    datafile:
+        label: 'File upload'
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    description:
+        label: Description
+        size: giant
+        oc.commentPosition: ''
+        span: full
+        type: richeditor

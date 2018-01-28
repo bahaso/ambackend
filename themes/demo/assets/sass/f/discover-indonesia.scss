@@ -1,0 +1,291 @@
+@import "_partials/base";
+
+/*override scss*/
+.wysiwyg li{
+	text-align: left;
+}
+
+.faq-inline{
+	overflow: hidden;
+}
+.fi-container{
+	border-bottom  : 1px solid #CCC;
+	padding 	   : 0 0 30px 10px; 
+	margin-bottom  : 36px;
+
+	&.no-mb{
+		margin-bottom: 0;
+	}
+	.fi-box{
+		/*@include inline-block(top);*/
+		/*width: 75%;*/
+		padding-left: 24px;
+		overflow: hidden;
+
+		&.info{
+			line-height: 2;
+		}
+
+		a:hover{
+			text-decoration : underline;
+		}
+	}
+
+	.fi-label{
+		font-family : $font-signika-semi;
+		font-size 	: rem( 28px ); 
+		color 		: $color-black-1;
+
+		line-height: normal;
+	}
+
+	.fi-desc{
+		font-family : $font-helvetica;
+		font-size 	: rem( 18px ); 
+		color 		: $color-black-2;
+		line-height : 1.8;
+		padding 	: 10px 0 8px; 
+
+		&.info{
+			padding: 5px 3px;
+		}
+	}
+
+	.fi-image{
+		float: left;
+	}
+	.fi-link{
+		font-family : $font-signika-reg;
+		font-size 	: rem( 18px ); 
+		color 		: $color-black-3;
+		font-weight : normal;
+		&:hover{
+			text-decoration : underline;
+		}
+	}
+	.fi-info{
+		font-family : $font-helvetica;
+		font-size 	: rem( 18px ); 
+		color 		: $color-black-2;
+	}
+}
+
+.faq-title-link{
+	text-align 	: center;
+	padding  	: 60px 0 32px;
+
+	.ftl-title{
+		@include inline-block();
+
+		font-family : $font-signika-reg;
+		font-size 	: rem( 30px );
+		color 		: $color-black-1;  	
+
+		margin 		: 0; 
+	}
+	.ftl-link{
+		float: right;
+
+		font-family : $font-signika-light; 
+		font-size 	: rem( 18px ); 
+		color 		: $color-purple-1;
+
+		&:hover{
+			text-decoration : underline;
+		}
+	}
+}
+
+.faq-split{
+	@include clearfix();
+
+	padding-bottom: 50px;
+
+	.fs-box{
+		width: 48.5%;
+		background-color : #F9F9F9;
+
+		&.left{
+			float: left;
+		}
+		&.right{
+			float: right;
+		}
+		
+		p{
+			text-align 	: left;
+			line-height : 2;
+
+			font-family : $font-helvetica;
+			font-size 	: rem( 18px ); 
+			color 		: $color-black-1;
+		}
+	}
+	.fs-container{
+		padding  	: 27px 45px 0 23px;
+		min-height 	: 275px;
+	}
+	.fs-title{
+		font-family : $font-signika-semi;
+		font-size 	: rem( 28px ); 
+		color 		: $color-black-1;
+
+		margin 		   : 0;
+		padding-bottom : 15px; 
+	}
+}
+
+.icons{
+	@include inline-block();
+	margin-right: 12px;
+
+	&.marker{
+		@include bg-img( 'public/icon-marker.png', 16px, 19px );
+	}
+	&.globe{
+		@include bg-img( 'public/icon-globe.png', 19px, 19px );
+	}
+	&.telephone{
+		@include bg-img( 'public/icon-telephone.png', 18px, 18px );
+	}
+}
+
+
+.faq .accordion-2 .title:before{
+	display: none;
+}
+
+.faq-triangle{
+	float: left;
+	margin: 15px 20px 0 0;
+
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 11px 0 11px 14px;
+	border-color: transparent transparent transparent #007bff;
+	line-height: 0px;
+	_border-color: #000000 #000000 #000000 #007bff;
+	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+
+	&.purple{
+		border-color: transparent transparent transparent #F42A9E;
+		_border-color: #000000 #000000 #000000 #F42A9E;
+	}
+
+	&.dark-purple{
+		border-color: transparent transparent transparent #B8008A;
+		_border-color: #000000 #000000 #000000 #B8008A;
+	}
+
+	&.blue{
+		border-color: transparent transparent transparent #0097E7;
+		_border-color: #000000 #000000 #000000 #0097E7;
+	}
+
+	&.dark-blue{
+		border-color: transparent transparent transparent #0071BC;
+		_border-color: #000000 #000000 #000000 #0071BC;
+	}
+
+	&.yellow{
+		border-color: transparent transparent transparent #FFD500;
+		_border-color: #000000 #000000 #000000 #FFD500;
+	}
+
+
+	&.orange{
+		border-color: transparent transparent transparent #FF7600;
+		_border-color: #000000 #000000 #000000 #FF7600;
+	}
+}
+
+
+
+/**
+ * MEDIA QUERIES MOBILE
+ */
+
+@include max-screen( $mq-size-m ){
+	.fi-container .fi-label{
+		font-size: rem( 24px );
+	}
+	.fi-container .fi-desc{
+		font-size: rem( 17px );
+	}
+	.fi-container .fi-link{
+		font-size: rem( 17px );
+	}
+
+	.faq-split{
+		.fs-box{
+			p{
+				font-size 	: rem( 16px ); 
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.fs-title{
+			font-size 	: rem( 22px ); 
+		}
+	}
+
+	.faq-title-link{
+		padding  	: 50px 0 32px;
+	}
+
+}
+
+@include max-screen( 640px ){
+	.faq-triangle{
+		margin: 15px 15px 0 0;
+	}
+	.fi-container .fi-image{
+		float 	: none;
+		display : block;
+		width   : 100%;
+		height  : auto;
+	}
+
+	.fi-container .fi-box{
+		padding : 20px 0 0;
+	}
+}
+
+@include max-screen( $mq-size-sm ){
+	.fi-container .fi-label{
+		font-size: rem( 22px );
+	}
+	.fi-container .fi-desc{
+		font-size: rem( 16px );
+	}
+	.fi-container .fi-link{
+		font-size: rem( 16px );
+	}
+
+	.faq-split{
+		.fs-box{
+			width: 100%;
+
+			&.left{
+				float: none;
+			}
+			&.right{
+				float: none;
+			}
+		}
+	}
+
+}
+
+@include max-screen( 380px ){
+	.faq-triangle{
+		display: none;
+	}
+
+	.fi-container{
+		padding : 0 0 30px 0;
+	}
+}

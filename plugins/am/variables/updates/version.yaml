@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table am_variables_slide'
+    - builder_table_create_am_variables_slide.php
+1.0.3:
+    - 'Updated table am_variables_slide'
+    - builder_table_update_am_variables_slides.php
+1.0.4:
+    - 'Created table am_variables_sponsors'
+    - builder_table_create_am_variables_sponsors.php
+1.0.5:
+    - 'Updated table am_variables_sponsors'
+    - builder_table_update_am_variables_sponsors.php

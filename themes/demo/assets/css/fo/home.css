@@ -1,0 +1,485 @@
+/* Imports */
+@font-face {
+  font-family: "Helvetica";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Helvetica.ttf");
+}
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("fonts/Helvetica-Bold.ttf");
+}
+@font-face {
+  font-family: "Raleway Semibold";
+  src: url("fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Signika Light";
+  src: url("fonts/Signika-Light.ttf");
+}
+@font-face {
+  font-family: "Signika Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Signika-Regular.ttf");
+}
+@font-face {
+  font-family: "Signika Semibold";
+  src: url("fonts/Signika-Semibold.ttf");
+}
+@font-face {
+  font-family: "Indonesiana Serif";
+  src: url("fonts/Indonesiana-Serif.ttf");
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/HelveticaNeue.ttf");
+}
+/* Compass plugins */
+/* gem install compass-rgbapng */
+/* RGBAPNG Configuration */
+/* COLOR LIST; */
+/* MEDIA QUERIES */
+/* Paths */
+/* Fonts */
+/*for text overlay position*/
+/* line 4, ../../../resources/assets/sass/f/home.scss */
+.bg-text-wrapper {
+  position: relative;
+}
+
+@-moz-keyframes fadeInCustom {
+  from {
+    transform: translate3d(-5%, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeInCustom {
+  from {
+    transform: translate3d(-5%, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes fadeInCustom {
+  from {
+    transform: translate3d(-5%, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@-moz-keyframes fadeInSmall {
+  from {
+    opacity: 0;
+    transform: translate3d(-5%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeInSmall {
+  from {
+    opacity: 0;
+    transform: translate3d(-5%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInSmall {
+  from {
+    opacity: 0;
+    transform: translate3d(-5%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 32, ../../../resources/assets/sass/f/home.scss */
+.fadeInCustom {
+  -webkit-animation-name: fadeInCustom;
+  -moz-animation-name: fadeInCustom;
+  animation-name: fadeInCustom;
+}
+
+/* line 38, ../../../resources/assets/sass/f/home.scss */
+.fadeInSmall {
+  -webkit-animation-name: fadeInSmall;
+  -moz-animation-name: fadeInSmall;
+  animation-name: fadeInSmall;
+}
+
+/* line 44, ../../../resources/assets/sass/f/home.scss */
+.background-text-overlay {
+  position: absolute !important;
+  /*@include animation-delay( 3s );*/
+}
+/* line 49, ../../../resources/assets/sass/f/home.scss */
+.background-text-overlay .txt-title {
+  -webkit-animation: fadeInCustom 1s ease 0s forwards;
+  -moz-animation: fadeInCustom 1s ease 0s forwards;
+  animation: fadeInCustom 1s ease 0s forwards;
+}
+/* line 55, ../../../resources/assets/sass/f/home.scss */
+.background-text-overlay .txt-desc {
+  -webkit-animation: fadeInSmall 1s ease 0.75s forwards;
+  -moz-animation: fadeInSmall 1s ease 0.75s forwards;
+  -animation: fadeInSmall 1s ease 0.75s forwards;
+  opacity: 0;
+}
+
+/*for text overlay in slideshow*/
+/* line 65, ../../../resources/assets/sass/f/home.scss */
+#slideshow .image-bg.bg-light h2 {
+  color: #FFF;
+  font-weight: bold;
+  margin: 0;
+}
+/* line 70, ../../../resources/assets/sass/f/home.scss */
+#slideshow .image-bg.bg-light p {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 4px 0 0;
+}
+/* line 78, ../../../resources/assets/sass/f/home.scss */
+#slideshow .image-bg.bg-light h2, #slideshow .image-bg.bg-light p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+}
+/* line 81, ../../../resources/assets/sass/f/home.scss */
+#slideshow .image-bg.bg-light h2.dark, #slideshow .image-bg.bg-light p.dark {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+
+/* line 90, ../../../resources/assets/sass/f/home.scss */
+#about {
+  padding: 40px 0 10px;
+}
+/* line 93, ../../../resources/assets/sass/f/home.scss */
+#about .logo-voyage {
+  margin: 85px 0 30px;
+}
+/* line 98, ../../../resources/assets/sass/f/home.scss */
+#about .desc .uppercase {
+  font-weight: 600;
+}
+
+/* line 107, ../../../resources/assets/sass/f/home.scss */
+.about-section .well {
+  min-height: 667px;
+  background: none;
+}
+/* line 112, ../../../resources/assets/sass/f/home.scss */
+.about-section .title {
+  font-weight: 600;
+}
+
+/* line 117, ../../../resources/assets/sass/f/home.scss */
+#voyage {
+  padding-left: 10px;
+}
+
+/* line 121, ../../../resources/assets/sass/f/home.scss */
+#news_wrapper {
+  background: #F7F8F8;
+  padding: 40px 0 10px;
+}
+
+/* line 126, ../../../resources/assets/sass/f/home.scss */
+#news {
+  padding: 0;
+}
+/* line 129, ../../../resources/assets/sass/f/home.scss */
+#news .col-sm-4 {
+  padding-right: 0;
+}
+/* line 134, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel li {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 138, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel img {
+  max-height: initial;
+}
+/* line 142, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel .flex-direction-nav a.flex-next {
+  right: 0;
+}
+/* line 146, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel .flex-direction-nav {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+/* line 152, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel.id-update .flex-direction-nav a.flex-next {
+  right: 16px;
+}
+/* line 158, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel .subtitle {
+  line-height: 1.7;
+}
+/* line 163, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 167, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .caption {
+  text-align: left;
+  padding: 0 5px 5px;
+  min-height: 45px;
+  line-height: 1.5;
+  background: url('/images/../public/img/am2018/rgba/303c8d7f-8.png?1495096686');
+  background: rgba(48, 60, 141, 0.5);
+}
+/* line 176, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .caption:hover .text-info {
+  display: block;
+}
+/* line 182, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .text-info {
+  display: none;
+  color: #FFF;
+}
+/* line 186, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .text-info .btn-link {
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 10px 0 0;
+  position: relative;
+  z-index: 1000;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #486174;
+}
+/* line 198, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .text-info .btn-link:hover {
+  background-color: #374a58;
+}
+/* line 204, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption h4 {
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 215, ../../../resources/assets/sass/f/home.scss */
+#countdown {
+  padding: 30px 0;
+  background: #688CA7;
+  color: #FFF;
+}
+/* line 220, ../../../resources/assets/sass/f/home.scss */
+#countdown .header-title {
+  font-size: 2.6rem;
+  margin: 0 0 30px;
+}
+
+/* line 227, ../../../resources/assets/sass/f/home.scss */
+.countdown-timer .text,
+.countdown-timer .label {
+  display: block;
+}
+/* line 232, ../../../resources/assets/sass/f/home.scss */
+.countdown-timer .days,
+.countdown-timer .hours,
+.countdown-timer .mins,
+.countdown-timer .secs,
+.countdown-timer .sep {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 4rem;
+  margin: 0 25px 0 0;
+}
+/* line 242, ../../../resources/assets/sass/f/home.scss */
+.countdown-timer .secs {
+  margin: 0;
+}
+/* line 246, ../../../resources/assets/sass/f/home.scss */
+.countdown-timer .ti-time {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 3rem;
+  margin: 0 15px 15px 0;
+}
+/* line 253, ../../../resources/assets/sass/f/home.scss */
+.countdown-timer .sep {
+  margin: 0 25px 20px 0;
+  font-size: 25px;
+}
+/* line 258, ../../../resources/assets/sass/f/home.scss */
+.countdown-timer .label {
+  margin: 5px 0 0;
+  padding: 0;
+  font-weight: 400;
+  background: none;
+}
+
+/* line 270, ../../../resources/assets/sass/f/home.scss */
+#follow i {
+  font-size: 4rem;
+  margin: 0 25px 0 0;
+}
+/* line 274, ../../../resources/assets/sass/f/home.scss */
+#follow .fo-col {
+  display: block;
+}
+/* line 277, ../../../resources/assets/sass/f/home.scss */
+#follow .header-title {
+  margin: 0 0 20px;
+}
+
+/* line 284, ../../../resources/assets/sass/f/home.scss */
+.btn-blue, .btn-blue:visited {
+  color: #688CA7;
+  border-color: #688CA7;
+}
+/* line 289, ../../../resources/assets/sass/f/home.scss */
+.btn-blue:hover {
+  background: #688CA7;
+}
+
+/**
+ * MEDIA QUERIES
+ */
+@media screen and (max-width: 1199px) {
+  /* line 300, ../../../resources/assets/sass/f/home.scss */
+  .about-section .well {
+    min-height: 724px;
+  }
+
+  /* line 305, ../../../resources/assets/sass/f/home.scss */
+  .about-section img {
+    height: auto;
+  }
+}
+@media screen and (max-width: 990px) {
+  /* line 313, ../../../resources/assets/sass/f/home.scss */
+  #about .logo-voyage {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  /* line 321, ../../../resources/assets/sass/f/home.scss */
+  .countdown-timer .sep {
+    margin: 0 0 20px 0;
+  }
+
+  /* line 326, ../../../resources/assets/sass/f/home.scss */
+  #follow {
+    padding: 20px 0 0;
+  }
+
+  /* line 329, ../../../resources/assets/sass/f/home.scss */
+  .about-section .well {
+    min-height: 857px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 336, ../../../resources/assets/sass/f/home.scss */
+  .container .masonry-item {
+    margin-bottom: 0;
+  }
+
+  /* line 342, ../../../resources/assets/sass/f/home.scss */
+  #news .logo-carousel img {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  /* line 349, ../../../resources/assets/sass/f/home.scss */
+  #about_imf {
+    padding: 30px 15px 0;
+  }
+
+  /* line 352, ../../../resources/assets/sass/f/home.scss */
+  #about_voyage {
+    padding: 0 15px 30px;
+  }
+
+  /* line 356, ../../../resources/assets/sass/f/home.scss */
+  .about-section .well {
+    min-height: auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  /* line 363, ../../../resources/assets/sass/f/home.scss */
+  #slideshow .image-bg.bg-light p {
+    font-size: 1.5rem;
+  }
+
+  /* line 368, ../../../resources/assets/sass/f/home.scss */
+  .background-text-overlay {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 100px !important;
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 378, ../../../resources/assets/sass/f/home.scss */
+  #slideshow .image-bg.bg-light p {
+    font-size: 1.4rem;
+  }
+
+  /* line 384, ../../../resources/assets/sass/f/home.scss */
+  .countdown-timer .days,
+  .countdown-timer .hours,
+  .countdown-timer .mins {
+    font-size: 3.2rem;
+    margin: 0 25px 0 0;
+  }
+  /* line 391, ../../../resources/assets/sass/f/home.scss */
+  .countdown-timer .secs {
+    font-size: 3.2rem;
+  }
+  /* line 395, ../../../resources/assets/sass/f/home.scss */
+  .countdown-timer .sep {
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  /* line 405, ../../../resources/assets/sass/f/home.scss */
+  #slideshow .image-bg.bg-light p {
+    font-size: 1.3rem;
+  }
+
+  /* line 411, ../../../resources/assets/sass/f/home.scss */
+  .countdown-timer .days,
+  .countdown-timer .hours,
+  .countdown-timer .mins {
+    font-size: 2.4rem;
+    margin: 0 10px 0 0;
+  }
+  /* line 417, ../../../resources/assets/sass/f/home.scss */
+  .countdown-timer .secs {
+    font-size: 2.4rem;
+  }
+  /* line 420, ../../../resources/assets/sass/f/home.scss */
+  .countdown-timer .sep {
+    font-size: 2.4rem;
+  }
+}

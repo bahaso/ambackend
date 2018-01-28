@@ -1,0 +1,12 @@
+list: $/am/attachments/models/pressrelease/columns.yaml
+modelClass: am\Attachments\Models\PressRelease
+title: PressRelease
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'am/attachments/pressrelease/update/:id'

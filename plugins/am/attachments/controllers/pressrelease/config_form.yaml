@@ -1,0 +1,10 @@
+name: PressRelease
+form: $/am/attachments/models/pressrelease/fields.yaml
+modelClass: am\Attachments\Models\PressRelease
+defaultRedirect: am/attachments/pressrelease
+create:
+    redirect: 'am/attachments/pressrelease/update/:id'
+    redirectClose: am/attachments/pressrelease
+update:
+    redirect: am/attachments/pressrelease
+    redirectClose: am/attachments/pressrelease

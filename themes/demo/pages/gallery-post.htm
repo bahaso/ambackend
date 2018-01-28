@@ -1,0 +1,67 @@
+title = "Gallery Post"
+url = "/gallery/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+==
+
+{% put head_page_css %}
+    <link href="{{ 'assets/vendor/owl.carousel/dist/assets/owl.carousel.min.css'|theme }}" rel="stylesheet">
+{% endput %}
+
+{% put foot_page_js %}
+    <script src="{{ 'assets/vendor/owl.carousel/dist/owl.carousel.min.js'|theme }}"></script>
+    <script src="{{ 'assets/javascript/f/owl-carousel.js'|theme }}"></script>
+{% endput %}
+
+{% set post = blogPost.post %}
+
+{% put layout_page %}
+	<div class="wysiwyg aligned">
+	    <h1 class="title fw600">
+            {{ post.title }}
+	    </h1>
+	    <div class="mb10">
+			<div class="content">
+				{{ post.content_html|raw }}
+			</div>
+	    </div>
+
+	    <a href="{{ 'gallery'|page }}" class="pull-right fw400">
+	        Back to Gallery
+	    </a>
+	    <div class="owl-carousel-gallery mb20"></div>
+	    <div class="owl-carousel gl" 
+	        data-items="3" 
+	        data-margin="15" 
+	        data-loop="true"
+	        data-autoplay="true" 
+	        data-autoplay-timeout="3000"
+	        data-autoplay-hover-pause="true"
+	        data-auto-width="true"
+	    >
+
+		{% if post.featured_images.count %}
+	        {% for image in post.featured_images %}
+		        <div class="owl-item link-img">
+	                <img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+		        </div>
+	        {% endfor %}
+		{% endif %}
+
+	    </div>
+	</div>
+{% endput %}
+
+{% partial 'sidebar/media' %}
+
+{% partial '_partials/_sidebar-navigation' %}
+
+{% partial '_partials/_sponsors.htm' custClass="bg-secondary" %}

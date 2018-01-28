@@ -1,0 +1,10 @@
+name: Slide
+form: $/am/variables/models/slide/fields.yaml
+modelClass: am\Variables\Models\Slide
+defaultRedirect: am/variables/slide
+create:
+    redirect: 'am/variables/slide/update/:id'
+    redirectClose: am/variables/slide
+update:
+    redirect: am/variables/slide
+    redirectClose: am/variables/slide

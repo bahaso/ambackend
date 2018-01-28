@@ -1,0 +1,23 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: left
+        type: text
+    img_slide:
+        label: 'Image Upload'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    description:
+        label: Description
+        size: large
+        oc.commentPosition: ''
+        mode: tab
+        span: full
+        type: markdown

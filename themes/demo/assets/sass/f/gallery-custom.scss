@@ -1,0 +1,20 @@
+@import "_partials/base";
+
+.box-photos{
+	margin-bottom : 30px;
+}
+
+@include max-screen( 768px ){
+	.image-caption{
+		img{
+			width: 100%;
+			min-height: 225px;
+			height: auto;
+		}
+	}
+
+	.mb30{
+		margin-bottom: 0;
+	}
+}
+

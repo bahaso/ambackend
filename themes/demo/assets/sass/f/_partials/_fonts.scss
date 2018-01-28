@@ -1,0 +1,65 @@
+$font-path : '' !default;
+
+@font-face
+{
+	font-family : "Helvetica";
+	font-weight : normal;
+	font-style  : normal;
+
+	src : url( $font-path + "fonts/Helvetica.ttf" ); 
+}
+
+@font-face
+{
+	font-family : "Helvetica Bold";
+
+	src : url( $font-path + "fonts/Helvetica-Bold.ttf" ); 
+}
+
+@font-face
+{
+	font-family : "Raleway Semibold";
+
+
+	src : url( $font-path + "fonts/Raleway-SemiBold.ttf" ); 
+}
+
+@font-face
+{
+	font-family : "Signika Light";
+
+	src : url( $font-path + "fonts/Signika-Light.ttf" ); 
+}
+
+@font-face
+{
+	font-family : "Signika Regular";
+	font-weight : normal;
+	font-style  : normal;
+
+	src : url( $font-path + "fonts/Signika-Regular.ttf" ); 
+}
+
+@font-face
+{
+	font-family : "Signika Semibold";
+
+	src : url( $font-path + "fonts/Signika-Semibold.ttf" ); 
+}
+
+
+@font-face
+{
+	font-family : "Indonesiana Serif";
+
+	src : url( $font-path + "fonts/Indonesiana-Serif.ttf" ); 
+}
+
+@font-face
+{
+	font-family : "HelveticaNeue";
+	font-weight : normal;
+	font-style  : normal;
+	
+	src : url( $font-path + "fonts/HelveticaNeue.ttf" ); 
+}

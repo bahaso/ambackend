@@ -1,0 +1,49 @@
+/* Imports */
+@import "../modules/helpers";
+@import "../modules/media-queries";
+
+@import "_partials/fonts";
+
+/* Compass plugins */
+@import "compass/css3";
+@import "rgbapng"; /* gem install compass-rgbapng */
+
+/* RGBAPNG Configuration */
+$rgbapng_path    : "../public/img/am2018/rgba";
+$rgbapng_px_size : 8;
+
+/* COLOR LIST; */
+$color-white : #FFF;
+
+$color-black-1 : #4C4C4C;
+$color-black-2 : #656565;
+$color-black-3 : #323232;
+$color-black-4 : #4D4D4D;
+
+$color-gray-1 : #999999;
+$color-gray-2 : #BDBEBF;
+
+$color-purple-1 : #CF347C;
+
+$border-gray  : #E7E7E7;
+
+/* MEDIA QUERIES */
+$mq-size-xl : 1379px;
+$mq-size-l  : 990px;
+$mq-size-m  : 720px;
+$mq-size-sm : 480px;
+$mq-size-s  : 320px;
+
+/* Paths */
+$img-traverse : "../../";
+$img-site  : $img-traverse + "img/am2018/";
+
+	/* Fonts */
+	$font-helvetica 	 	: "Helvetica";
+	$font-helvetica-bold 	: "Helvetica Bold";
+	$font-helvetica-neue 	: "HelveticaNeue";
+	$font-raleway-semi 		: "Raleway Semibold";
+	$font-signika-light 	: "Signika Light";
+	$font-signika-reg 		: "Signika Regular";
+	$font-signika-semi 		: "Signika Semibold";
+	$font-indonesiana-serif : "Indonesiana Serif";

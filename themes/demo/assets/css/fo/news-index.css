@@ -1,0 +1,90 @@
+/* Imports */
+@font-face {
+  font-family: "Helvetica";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Helvetica.ttf");
+}
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("fonts/Helvetica-Bold.ttf");
+}
+@font-face {
+  font-family: "Raleway Semibold";
+  src: url("fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Signika Light";
+  src: url("fonts/Signika-Light.ttf");
+}
+@font-face {
+  font-family: "Signika Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Signika-Regular.ttf");
+}
+@font-face {
+  font-family: "Signika Semibold";
+  src: url("fonts/Signika-Semibold.ttf");
+}
+@font-face {
+  font-family: "Indonesiana Serif";
+  src: url("fonts/Indonesiana-Serif.ttf");
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/HelveticaNeue.ttf");
+}
+/* Compass plugins */
+/* gem install compass-rgbapng */
+/* RGBAPNG Configuration */
+/* COLOR LIST; */
+/* MEDIA QUERIES */
+/* Paths */
+/* Fonts */
+/* line 3, ../../../resources/assets/sass/f/news-index.scss */
+.featured-wrapper,
+.news-item {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #486174;
+}
+
+/* line 10, ../../../resources/assets/sass/f/news-index.scss */
+.featured-wrapper a {
+  color: inherit;
+}
+/* line 14, ../../../resources/assets/sass/f/news-index.scss */
+.featured-wrapper a:hover .title {
+  text-decoration: underline;
+}
+
+/* line 21, ../../../resources/assets/sass/f/news-index.scss */
+.news-item {
+  padding: 20px 10px 10px;
+}
+/* line 24, ../../../resources/assets/sass/f/news-index.scss */
+.news-item a {
+  color: inherit;
+  font-weight: normal;
+}
+/* line 29, ../../../resources/assets/sass/f/news-index.scss */
+.news-item a:hover .title {
+  text-decoration: underline;
+}
+/* line 35, ../../../resources/assets/sass/f/news-index.scss */
+.news-item .title {
+  margin: -3px 0 10px;
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+/* line 41, ../../../resources/assets/sass/f/news-index.scss */
+.news-item .txt {
+  margin-bottom: 10px;
+  line-height: 1.9;
+}
+/* line 46, ../../../resources/assets/sass/f/news-index.scss */
+.news-item time {
+  font-size: 1.5rem;
+}

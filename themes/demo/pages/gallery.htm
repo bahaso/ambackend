@@ -1,0 +1,81 @@
+title = "Gallery"
+url = "/gallery"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "photo-gallery"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "gallery"
+postPage = "gallery-post"
+==
+{% put head_page_css %}
+    <link href="{{ 'assets/css/fo/gallery-custom.css'|theme }}" rel="stylesheet">
+{% endput %}
+
+{% partial '_partials/_breadcrumb.htm' %}
+
+{% set posts = blogPosts.posts %}
+
+{% put layout_page %}
+	<div class="wysiwyg aligned">
+	    <div class="row mb30">
+			{% for post in posts %}
+	        <div class="col-sm-6 box-photos">
+	            <div class="image-caption mb-xs-32">
+	                <a href="{{ post.url }}">
+						{% if post.featured_images.count %}
+						    <div class="featured-images text-center">
+						        {% for image in post.featured_images %}
+							        {% if loop.index == 1 %}
+						                <img
+						                    data-src="{{ image.filename }}"
+						                    src="{{ image.path }}"
+						                    alt="{{ image.description }}"
+						                    style="width:400px;height:225px;" />
+						             {% endif %}
+						        {% endfor %}
+						    </div>
+						{% endif %}
+	                    <div class="caption">
+	                        <p>
+	                           {{ post.title }}
+	                        </p>
+	                        <p>
+	                         	{{ post.featured_images.count }} Photos | 52 Views
+	                        </p>
+	                    </div>
+	                </a>
+	            </div>
+	        </div>
+		    {% else %}
+		        <div class="no-data">{{ noPostsMessage }}</div>
+		    {% endfor %}
+	    </div>
+		{% if posts.lastPage > 1 %}
+		    <ul class="pagination">
+		        {% if posts.currentPage > 1 %}
+		            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+		        {% endif %}
+
+		        {% for page in 1..posts.lastPage %}
+		            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+		                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+		            </li>
+		        {% endfor %}
+
+		        {% if posts.lastPage > posts.currentPage %}
+		            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+		        {% endif %}
+		    </ul>
+		{% endif %}
+	</div>
+{% endput %}
+
+{% partial 'sidebar/media' %}
+
+{% partial '_partials/_sidebar-navigation' %}
+

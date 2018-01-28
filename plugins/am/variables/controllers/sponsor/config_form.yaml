@@ -1,0 +1,10 @@
+name: Sponsor
+form: $/am/variables/models/sponsor/fields.yaml
+modelClass: am\Variables\Models\Sponsor
+defaultRedirect: am/variables/sponsor
+create:
+    redirect: 'am/variables/sponsor/update/:id'
+    redirectClose: am/variables/sponsor
+update:
+    redirect: am/variables/sponsor
+    redirectClose: am/variables/sponsor

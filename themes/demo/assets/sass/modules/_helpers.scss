@@ -1,0 +1,89 @@
+
+
+@function em( $target, $context: 16px ) 
+{
+    @if $target == 0 { @return 0 }
+    @return $target / $context + 0em;
+}
+
+@function rem( $target, $context: 10px ) 
+{
+    @if $target == 0 { @return 0 }
+    @return $target / $context + 0rem;
+}
+
+@mixin clearfix()
+{
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin bg-img( $filename, $width : 0, $height : 0, $repeat : no-repeat, $path : $img-site )
+{
+    background : url( $path + $filename ) $repeat;
+    
+    @if $width != 0 {
+        width      : $width;
+    }
+    @if $height != 0 {
+        height     : $height;
+    }
+}
+
+@mixin triangle($size, $color, $direction:up)
+{
+    width  : 0;
+    height : 0;
+    border : $size solid transparent;
+
+    @include inline-block;
+
+    @if $direction==up
+    {
+        border-top          : none;
+        border-bottom-color : $color;
+    }
+    @else if $direction==left
+    {
+        border-left         : none;
+        border-right-color  : $color;
+    }
+    @else if $direction==right
+    {
+        border-right        : none;
+        border-left-color   : $color;
+    }
+    @else
+    {
+        border-bottom       : none;
+        border-top-color    : $color;
+    }
+}
+
+@mixin scrollbar($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) 
+{
+    &::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+
+    // For Internet Explorer
+    body {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+    }
+}

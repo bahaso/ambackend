@@ -1,0 +1,75 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AM 2018 - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        
+        <link href="{{ 'assets/css/f/bootstrap.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/f/themify-icons.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/f/flexslider.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/f/lightbox.min.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/f/ytplayer.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/f/theme.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/f/custom.css'|theme }}" rel="stylesheet">
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+
+        <link href="{{ 'assets/css/fo/main.css'|theme }}" rel="stylesheet">
+
+        {% placeholder head_page_css %}
+    </head>
+    <body class="scroll-assist">
+        
+        <div id="st_container" class="@yield( 'outer_class' )">
+           <header id="st_header" class="nav-container" role="banner">
+            	<a id="top"></a>
+            	<nav>
+            		{% partial 'site/_top-header' %}
+            		{% partial 'site/_header' %}
+            	</nav>
+            </header>
+            
+            <nav id="st_nav" role="navigation">
+            </nav>
+            
+            <div id="st_body" role="main" class="@yield( 'body_class' )">
+                {% page %}
+            </div>
+            
+            <footer id="st_footer" class="footer-1 bg-dark" role="contentinfo">
+                {% partial 'site/_footer' %}
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/modernizr-2.8.3.min.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/jquery-1.12.2.min.js'|theme }}"></script>
+
+        <script src="{{ 'assets/javascript/f/jquery.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/bootstrap.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/flickr.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/flexslider.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/lightbox.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/masonry.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/twitterfetcher.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/spectragram.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/ytplayer.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/countdown.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/smooth-scroll.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/parallax.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/f/scripts.js'|theme }}"></script>
+
+        <script src="{{ 'assets/vendor/zebra_datepicker/dist/zebra_datepicker.min.js'|theme }}"></script>
+
+        {% placeholder foot_page_js %}
+
+    </body>
+</html>

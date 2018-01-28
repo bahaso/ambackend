@@ -1,0 +1,64 @@
+/* Imports */
+@font-face {
+  font-family: "Helvetica";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Helvetica.ttf");
+}
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("fonts/Helvetica-Bold.ttf");
+}
+@font-face {
+  font-family: "Raleway Semibold";
+  src: url("fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Signika Light";
+  src: url("fonts/Signika-Light.ttf");
+}
+@font-face {
+  font-family: "Signika Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Signika-Regular.ttf");
+}
+@font-face {
+  font-family: "Signika Semibold";
+  src: url("fonts/Signika-Semibold.ttf");
+}
+@font-face {
+  font-family: "Indonesiana Serif";
+  src: url("fonts/Indonesiana-Serif.ttf");
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/HelveticaNeue.ttf");
+}
+/* Compass plugins */
+/* gem install compass-rgbapng */
+/* RGBAPNG Configuration */
+/* COLOR LIST; */
+/* MEDIA QUERIES */
+/* Paths */
+/* Fonts */
+/* line 3, ../../../resources/assets/sass/f/gallery-custom.scss */
+.box-photos {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 9, ../../../resources/assets/sass/f/gallery-custom.scss */
+  .image-caption img {
+    width: 100%;
+    min-height: 225px;
+    height: auto;
+  }
+
+  /* line 16, ../../../resources/assets/sass/f/gallery-custom.scss */
+  .mb30 {
+    margin-bottom: 0;
+  }
+}

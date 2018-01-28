@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table am_attachments_'
+    - builder_table_create_am_attachments_.php
+1.0.3:
+    - 'Updated table am_attachments_'
+    - builder_table_update_am_attachments_.php
+1.0.4:
+    - 'Updated table am_attachments_'
+    - builder_table_update_am_attachments__2.php

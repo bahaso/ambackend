@@ -1,0 +1,11 @@
+plugin:
+    name: 'am.faqs::lang.plugin.name'
+    description: 'am.faqs::lang.plugin.description'
+    author: am
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    faq-menu:
+        label: Faqs
+        url: am/faqs/faq
+        icon: icon-life-ring

@@ -1,0 +1,245 @@
+/* Imports */
+/* Compass plugins */
+/* gem install compass-rgbapng */
+/* RGBAPNG Configuration */
+/* MEDIA QUERIES */
+/* line 3, ../../../resources/assets/sass/f/home.scss */
+#about {
+  padding: 40px 0 10px;
+}
+/* line 6, ../../../resources/assets/sass/f/home.scss */
+#about .logo-voyage {
+  margin: 85px 0 30px;
+}
+/* line 11, ../../../resources/assets/sass/f/home.scss */
+#about .desc .uppercase {
+  font-weight: 600;
+}
+
+/* line 20, ../../../resources/assets/sass/f/home.scss */
+.about-section .well {
+  min-height: 520px;
+  background: none;
+}
+/* line 25, ../../../resources/assets/sass/f/home.scss */
+.about-section .title {
+  font-weight: 600;
+}
+
+/* line 30, ../../../resources/assets/sass/f/home.scss */
+#voyage {
+  padding-left: 10px;
+}
+
+/* line 34, ../../../resources/assets/sass/f/home.scss */
+#news_wrapper {
+  background: #F7F8F8;
+  padding: 40px 0 10px;
+}
+
+/* line 39, ../../../resources/assets/sass/f/home.scss */
+#news {
+  padding: 0;
+}
+/* line 42, ../../../resources/assets/sass/f/home.scss */
+#news .col-sm-4 {
+  padding-right: 0;
+}
+/* line 47, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel li {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 51, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel img {
+  max-height: initial;
+}
+/* line 55, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel .flex-direction-nav a.flex-next {
+  right: 0;
+}
+/* line 59, ../../../resources/assets/sass/f/home.scss */
+#news .logo-carousel .flex-direction-nav {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+/* line 64, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 68, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .caption {
+  text-align: left;
+  padding: 0 5px 5px;
+  min-height: 45px;
+  line-height: 1.5;
+  background: url('/images/../public/img/am2018/rgba/303c8d7f-8.png?1495454822');
+  background: rgba(48, 60, 141, 0.5);
+}
+/* line 77, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .caption:hover .text-info {
+  display: block;
+}
+/* line 83, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .text-info {
+  display: none;
+  color: #FFF;
+}
+/* line 87, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .text-info .btn-link {
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 10px 0 0;
+  position: relative;
+  z-index: 1000;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #486174;
+}
+/* line 99, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption .text-info .btn-link:hover {
+  background-color: #374a58;
+}
+/* line 105, ../../../resources/assets/sass/f/home.scss */
+#news .image-caption h4 {
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+<<<<<<< HEAD
+/* line 83, ../../../resources/assets/sass/f/home.scss */
+=======
+/* line 119, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+#countdown {
+  padding: 30px 0;
+  background: #688CA7;
+  color: #FFF;
+}
+<<<<<<< HEAD
+/* line 88, ../../../resources/assets/sass/f/home.scss */
+=======
+/* line 124, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+#countdown .header-title {
+  font-size: 2.6rem;
+  margin: 0 0 30px;
+}
+
+<<<<<<< HEAD
+/* line 95, ../../../resources/assets/sass/f/home.scss */
+=======
+/* line 131, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+.countdown-timer .text,
+.countdown-timer .label {
+  display: block;
+}
+<<<<<<< HEAD
+/* line 100, ../../../resources/assets/sass/f/home.scss */
+=======
+/* line 136, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+.countdown-timer .days,
+.countdown-timer .hours,
+.countdown-timer .mins,
+.countdown-timer .secs,
+.countdown-timer .sep {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 4rem;
+  margin: 0 25px 0 0;
+}
+<<<<<<< HEAD
+/* line 110, ../../../resources/assets/sass/f/home.scss */
+=======
+/* line 147, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+.countdown-timer .ti-time {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 3rem;
+  margin: 0 15px 15px 0;
+}
+<<<<<<< HEAD
+/* line 117, ../../../resources/assets/sass/f/home.scss */
+=======
+/* line 154, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+.countdown-timer .sep {
+  margin: 0 25px 20px 0;
+  font-size: 25px;
+}
+<<<<<<< HEAD
+/* line 122, ../../../resources/assets/sass/f/home.scss */
+=======
+/* line 159, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+.countdown-timer .label {
+  margin: 5px 0 0;
+  padding: 0;
+  font-weight: 400;
+  background: none;
+}
+
+<<<<<<< HEAD
+/* line 134, ../../../resources/assets/sass/f/home.scss */
+=======
+/* line 170, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+#follow i {
+  font-size: 4rem;
+  margin: 0 25px 0 0;
+}
+<<<<<<< HEAD
+/* line 138, ../../../resources/assets/sass/f/home.scss */
+#follow .fo-col {
+  display: block;
+}
+/* line 141, ../../../resources/assets/sass/f/home.scss */
+=======
+/* line 174, ../../../resources/assets/sass/f/home.scss */
+#follow .fo-col {
+  display: block;
+}
+/* line 177, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+#follow .header-title {
+  margin: 0 0 20px;
+}
+
+/* line 148, ../../../resources/assets/sass/f/home.scss */
+.btn-blue, .btn-blue:visited {
+  color: #688CA7;
+  border-color: #688CA7;
+}
+/* line 153, ../../../resources/assets/sass/f/home.scss */
+.btn-blue:hover {
+  background: #688CA7;
+}
+
+/**
+ * MEDIA QUERIES
+ */
+@media screen and (max-width: 990px) {
+<<<<<<< HEAD
+  /* line 164, ../../../resources/assets/sass/f/home.scss */
+=======
+  /* line 188, ../../../resources/assets/sass/f/home.scss */
+>>>>>>> dev
+  #about .logo-voyage {
+    margin-top: 0;
+    text-align: center;
+  }
+}

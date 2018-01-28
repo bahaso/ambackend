@@ -1,0 +1,10 @@
+name: Publication
+form: $/am/attachments/models/publication/fields.yaml
+modelClass: am\Attachments\Models\Publication
+defaultRedirect: am/attachments/publication
+create:
+    redirect: 'am/attachments/publication/update/:id'
+    redirectClose: am/attachments/publication
+update:
+    redirect: am/attachments/publication
+    redirectClose: am/attachments/publication

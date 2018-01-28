@@ -1,0 +1,209 @@
+@import "_partials/base";
+@import "_partials/common";
+
+#st_top_header {
+	.sub{
+		/*color  	  : #9EAAB5;*/
+		font-size  : rem(15px);
+		font-weight: bold;
+	}
+}
+
+$nav-height : 70px; /*default 100px*/
+.nav-bar {
+	height  	: $nav-height;
+	max-height  : $nav-height; 
+
+	.module {
+		height : $nav-height;
+	}
+
+		/**
+		 * LEFT
+		 */
+		a {
+			height : auto;
+		}
+
+		.logo-link {
+			margin : 3px 0 0; /*default 16px top*/
+		}
+}
+
+		/**
+		 * RIGHT
+		 */
+		#st_menu {
+			/* cllass in header blade top v-align-children*/
+			margin : 6px 0 0; /*default 20px top - same with mobile menu*/
+
+			.module {
+				height : 55px;
+			}
+		}
+
+/*Menu header normal*/
+.menu{
+	li{
+		a{
+			opacity 	: 0.8;
+			font-weight : bold;			
+		}
+	}
+}
+
+.menu{
+	&> li {
+
+		ul {
+
+			li {
+			}
+
+			&:first-child {
+			}
+
+			&:last-child {
+			}
+
+			a{
+				opacity 	: 0.8;
+				font-weight : bold;
+			}
+		}
+
+		&:hover {
+			&> ul {
+
+			}
+		}
+	}
+}
+
+#st_footer {
+	padding : 40px 0 30px;
+	background-color: #486174;
+}
+	#st_foot_contact {
+		.lbl,
+		.value {
+			font-weight : 600;
+			@include inline-block( middle );
+		}
+
+		.lbl {
+			&.full{
+				width : auto;
+			}
+			width : 30%
+		}
+		.value {
+		
+		}
+	}
+
+#copyright{
+	color: #FFF;
+	text-align: center;
+}
+
+.menu{
+	li{
+		ul{
+			background : #405767;
+		}
+	}
+}
+
+.logo{
+	max-height: 100%;
+	height : auto;
+}
+
+/**
+ * MEDIA QUERIES
+ */
+
+/*text MENU for navigation*/
+ .ti-txt-menu{
+ 	display: none;
+
+ 	float: left;
+ 	margin: 20px 12px 0 0;
+ }
+
+@include max-screen( $mq-size-xl )
+{
+	.ti-txt-menu{
+		display: block;
+	}
+	.module.widget-handle i{
+		font-size: 25px;
+	}
+
+	#st_menu, 
+	.nav-bar {
+	 	 .module {
+			height : auto;	 	 	
+	 	 }
+	}
+	.nav-bar {
+		.module {
+			&.widget-handle.mobile-toggle {
+				margin : 6px 0 0;
+				border : 0 !important;
+				display: block !important;
+			}
+		}
+	}
+
+	.nav-bar .module-group .module{
+		display: block;
+		float: none;
+		width: 100%;		
+	}
+}
+
+@include max-screen( $mq-size-m )
+{
+	#st_top_header{
+		.module.left{
+			width: 100%;
+			padding : 0 16px 0 32px;
+		}
+
+		.ti-location-arrow{
+			@include inline-block();
+		}
+		.sub{
+			font-size: rem( 13px );
+			@include inline-block();
+		}
+	}
+}
+
+@include max-screen( 620px )
+{
+	#st_top_header{
+		height: 50px;
+	}
+
+	#st_top_header .sub{
+		width: 92%;
+		line-height: 1.6;
+	}
+}
+
+@include max-screen( 380px )
+{
+	#st_top_header{
+		.sub{
+			width: 90%;
+			font-size: rem( 12px );
+		}
+	}
+
+	#nav_logo{
+		width: 80%;
+	}
+}

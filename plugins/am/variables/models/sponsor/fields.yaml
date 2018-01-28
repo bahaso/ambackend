@@ -1,0 +1,21 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    link_url:
+        label: 'Link Url'
+        oc.commentPosition: ''
+        span: left
+        type: text
+    img_sponsor:
+        label: 'Image Upload'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload

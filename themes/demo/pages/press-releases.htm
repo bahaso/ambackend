@@ -1,0 +1,112 @@
+title = "Press Releases"
+url = "/press-releases"
+layout = "default"
+is_hidden = 0
+
+[builderList]
+modelClass = "Civira\Publications\Models\Publication"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "press-releases-post"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = "{{ 5 }}"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+{% partial '_partials/_breadcrumb.htm' %}
+
+{% put layout_page %}
+    <section class="wysiwyg">
+        <h1 class="title fw600 no-mb">
+            Press Releases
+        </h1>
+        <div class="content">
+            <table class="table am2018">
+                <thead>
+                <tr>
+                    <th width="20%">Date</th>
+                    <th>Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for record in records if record.category == 'press-releases' %}
+                        <tr>
+                            <td>{{ record.date }}</td>
+                            <td>
+                                {# Use spaceless tag to remove spaces inside the A tag. #}
+                                {% spaceless %}
+                                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
+
+                                        {{ attribute(record, displayColumn) }}
+                                        
+                                        </a>
+                                {% endspaceless %}
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr class="no-data">
+                            <td colspan="2">{{ noRecordsMessage }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            {% if records.lastPage > 1 %}
+                <ul class="pagination">
+                    {% if records.currentPage > 1 %}
+                        <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
+                    {% endif %}
+
+                    {% for page in 1..records.lastPage %}
+                        <li class="{{ records.currentPage == page ? 'active' : null }}">
+                            <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                        </li>
+                    {% endfor %}
+
+                    {% if records.lastPage > records.currentPage %}
+                        <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+
+        </div>
+
+        <h1 class="title fw600 no-mb">
+            Media Contact
+        </h1>
+        <div class="content">
+            <div class="row" style="font-size: 13px">
+                <div class="col-sm-6">
+                    <b>Nufransa Wira Sakti</b><br>
+                    Head of Communication and Information Services Bureau, Ministry of Finance of Indonesia<br />
+                    Email : nufransa.sakti@kemenkeu.go.id<br/>
+                    Phone : +62-21-3500849<br/>
+                    Address : Juanda I Building, 11th floor, Dr. Wahidin Raya St No.1, Jakarta Pusat 10710<br/>
+                </div>
+                <div class="col-sm-6">
+                    <b>Andiwiana Septonarwanto</b><br>
+                    Director of Communication Department, Bank of Indonesia<br/>
+                    Email : dkom@bi.go.id<br/>
+                    Phone : +62-21-1500131<br/>
+                    Address : MH Thamrin St No.2, Jakarta Pusat 10350<br/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endput %}
+
+{% partial 'sidebar/media' %}
+
+{% partial '_partials/_sidebar-navigation' %}
+
+{% partial '_partials/_sponsors.htm' custClass="bg-secondary" %}

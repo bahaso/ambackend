@@ -1,0 +1,20 @@
+plugin:
+    name: 'am.variables::lang.plugin.name'
+    description: 'am.variables::lang.plugin.description'
+    author: am
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    variables-menu:
+        label: Variables
+        url: am/variables/slide
+        icon: icon-adjust
+        sideMenu:
+            slideshow-item:
+                label: 'Slide Show'
+                url: am/variables/slide
+                icon: icon-image
+            sponsor-item:
+                label: Sponsors
+                url: am/variables/sponsor
+                icon: icon-street-view

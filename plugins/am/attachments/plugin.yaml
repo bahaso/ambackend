@@ -1,0 +1,20 @@
+plugin:
+    name: 'am.attachments::lang.plugin.name'
+    description: 'am.attachments::lang.plugin.description'
+    author: am
+    icon: oc-icon-file-archive-o
+    homepage: ''
+navigation:
+    attachments-menu:
+        label: Attachments
+        url: am/attachments/publication
+        icon: icon-file-archive-o
+        sideMenu:
+            publication-side-item:
+                label: Publications
+                url: am/attachments/publication
+                icon: icon-file-text
+            press-release-item:
+                label: 'Press Releases'
+                url: am/attachments/pressrelease
+                icon: icon-file-text-o

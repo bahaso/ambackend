@@ -1,0 +1,11 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    link_url:
+        label: 'Link Url'
+        type: text
+        searchable: true
+        sortable: true

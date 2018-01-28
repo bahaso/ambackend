@@ -1,0 +1,25 @@
+description = "sidebar navigation media"
+==
+
+{% put layout_sidebar %}
+<li class="has-children {% if this.page.id == 'news' or this.page.id == 'news-post' %}active{% endif %}">
+    <a href="{{ 'news'|page }}" class="lbl">
+        News
+    </a>
+</li>
+<li class="{% if this.page.id == 'press-releases' or this.page.id == 'press-releases-post' %}active{% endif %}">
+    <a href="{{ 'press-releases'|page }}" class="lbl">
+        Press Releases
+    </a>
+</li>
+<li class="{% if this.page.id == 'publications' or this.page.id == 'publications-post' %}active{% endif %}">
+    <a href="{{ 'publications'|page }}" class="lbl">
+        Publications
+    </a>
+</li>
+<li class="{% if this.page.id == 'gallery' or this.page.id == 'gallery-post' %}active{% endif %}">
+    <a href="{{ 'gallery'|page }}" class="lbl">
+        Photo Gallery
+    </a>
+</li>
+{% endput %}
