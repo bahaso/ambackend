@@ -1,14 +1,36 @@
+==========================
+BACKEND INSTALLATION
+==========================
+
 1. Run on PHP7
 2. Make sure ./storage/cms/combiner folder exist, with structure of:
 
-- ./storage/cms/combiner
+    - ./storage/cms/combiner
 
 3. run "php artisan october:up"
 4. access backend url - "dashboard":
 
-./[folder_name]/dashboard
+    ./[folder_name]/dashboard
 
 4. user credential is:
 
-username: admin
-password: admin
+    username: admin
+    password: admin
+
+
+==========================
+FRONTEND INSTALLATION
+==========================
+
+1. add environment configuration:
+
+    FILESYSTEM_WEB_ROOT=/var/www/amoctober/storage/app/uploads
+    FILESYSTEM_WEB_SHORTCUT=public
+
+FILESYSTEM_WEB_ROOT may be changed depends on folder structure in your server
+
+2. create a soft symlink for "images" folder in public folder that references to storage/app/uploads folder in octobercms project directory
+
+    ln -s /var/www/am2018/public/images /var/www/amoctober/storage/app/uploads
+
+test symlink so images folder references to storage/app/uploads folder in octobercms project directory
