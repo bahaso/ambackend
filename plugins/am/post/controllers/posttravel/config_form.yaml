@@ -1,0 +1,10 @@
+name: PostTravel
+form: $/am/post/models/posttravel/fields.yaml
+modelClass: Am\Post\Models\PostTravel
+defaultRedirect: am/post/posttravel
+create:
+    redirect: 'am/post/posttravel/update/:id'
+    redirectClose: am/post/posttravel
+update:
+    redirect: am/post/posttravel
+    redirectClose: am/post/posttravel

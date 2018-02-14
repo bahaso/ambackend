@@ -1,0 +1,15 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+    discover_id:
+        label: 'Discover Post Title'
+        type: text
+        searchable: true
+        select: title
+        relation: discover
+    url_link:
+        label: 'Url Link'
+        type: text
+        searchable: true

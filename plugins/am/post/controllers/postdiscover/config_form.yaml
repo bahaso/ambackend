@@ -1,0 +1,10 @@
+name: PostDiscover
+form: $/am/post/models/postdiscover/fields.yaml
+modelClass: Am\Post\Models\PostDiscover
+defaultRedirect: am/post/postdiscover
+create:
+    redirect: 'am/post/postdiscover/update/:id'
+    redirectClose: am/post/postdiscover
+update:
+    redirect: am/post/postdiscover
+    redirectClose: am/post/postdiscover

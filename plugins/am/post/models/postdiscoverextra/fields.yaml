@@ -1,0 +1,34 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    discover:
+        label: 'Discover Post'
+        nameFrom: title
+        descriptionFrom: description
+        span: left
+        type: relation
+        comment: 'Parent Post Content'
+    url_link:
+        label: 'Url link'
+        oc.commentPosition: ''
+        span: left
+        type: text
+    discoverExtraImage:
+        label: 'Image Upload'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    summary:
+        label: Summary
+        size: large
+        oc.commentPosition: ''
+        span: left
+        type: textarea

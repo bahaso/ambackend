@@ -1,0 +1,28 @@
+columns:
+    title:
+        label: title
+        type: text
+        searchable: true
+    population:
+        label: Population
+        type: text
+    area:
+        label: Area
+        type: text
+        searchable: true
+    language:
+        label: Language
+        type: text
+        searchable: true
+    religion:
+        label: Religion
+        type: text
+        searchable: true
+    government:
+        label: Government
+        type: text
+        searchable: true
+    currency:
+        label: Currency
+        type: text
+        searchable: true

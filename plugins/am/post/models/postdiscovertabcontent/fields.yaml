@@ -1,0 +1,44 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    discover_tab:
+        label: 'Discover Tab'
+        nameFrom: title
+        descriptionFrom: description
+        span: left
+        type: relation
+        commentAbove: Title
+    arrow_color:
+        label: 'Arrow Color'
+        oc.commentPosition: ''
+        options:
+            blue: Blue
+            purple: Purple
+            dark-blue: 'Dark Blue'
+            yellow: Yellow
+        span: left
+        type: dropdown
+    url_link:
+        label: 'Url Link'
+        oc.commentPosition: ''
+        span: left
+        type: text
+    tabContentImage:
+        label: 'Image Upload'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    summary:
+        label: Summary
+        size: huge
+        oc.commentPosition: ''
+        span: full
+        type: richeditor

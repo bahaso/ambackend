@@ -1,0 +1,18 @@
+fields:
+    title:
+        label: 'benfreke.menumanager::lang.modeldataform.title'
+        span: left
+        type: text
+    url_link:
+        label: Url
+        span: left
+        type: text
+        comment: 'benfreke.menumanager::lang.modeldataform.externalurlcomment'
+    post_map:
+        label: Articles
+        oc.commentPosition: ''
+        nameFrom: title
+        descriptionFrom: description
+        emptyOption: 'Choose Article'
+        span: left
+        type: relation

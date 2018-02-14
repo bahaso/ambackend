@@ -1,0 +1,52 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    population:
+        label: Population
+        oc.commentPosition: ''
+        span: left
+        type: text
+    area:
+        label: Area
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    language:
+        label: Language
+        oc.commentPosition: ''
+        span: left
+        type: text
+    religion:
+        label: Religion
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    government:
+        label: Government
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    currency:
+        label: Currency
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    travelImage:
+        label: 'Image Upload'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    content:
+        label: Content
+        size: huge
+        oc.commentPosition: ''
+        span: full
+        type: richeditor

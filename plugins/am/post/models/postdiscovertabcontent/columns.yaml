@@ -1,0 +1,11 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+    discover_tab_id:
+        label: 'Discover Tab Title'
+        type: text
+        searchable: true
+        select: title
+        relation: discover_tab

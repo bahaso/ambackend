@@ -6,6 +6,7 @@ use BackendMenu;
 use Backend\Classes\Controller;
 use ApplicationException;
 use RainLab\Blog\Models\Post;
+use Am\Post\Models\PostMap;
 
 class Posts extends Controller
 {
@@ -125,5 +126,29 @@ class Posts extends Controller
         return [
             'preview' => $previewHtml
         ];
+    }
+
+
+    /**
+     * For articles map in menu
+     */
+    public function formAfterSave( $model )
+    {
+        $db_post_map = PostMap::wherePostId( $model->id )->wherePostType( 'rainlab' )->first();
+
+        if( $db_post_map )
+        {
+            $db_post_map->title = $model->title;
+            $db_post_map->slug  = $model->slug;
+            $db_post_map->save();
+        }else
+        {
+            $db_post_map = new PostMap;
+            $db_post_map->title     = $model->title;
+            $db_post_map->slug      = $model->slug;
+            $db_post_map->post_id   = $model->id;
+            $db_post_map->post_type = 'rainlab';
+            $db_post_map->save();
+        }
     }
 }

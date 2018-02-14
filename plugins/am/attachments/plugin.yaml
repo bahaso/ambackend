@@ -10,7 +10,7 @@ navigation:
         url: am/attachments/publication
         icon: icon-file-archive-o
         sideMenu:
-            publication-side-item:
+            publication-item:
                 label: Publications
                 url: am/attachments/publication
                 icon: icon-file-text

@@ -1,0 +1,10 @@
+name: PostDiscoverTab
+form: $/am/post/models/postdiscovertab/fields.yaml
+modelClass: Am\Post\Models\PostDiscoverTab
+defaultRedirect: am/post/postdiscovertab
+create:
+    redirect: 'am/post/postdiscovertab/update/:id'
+    redirectClose: am/post/postdiscovertab
+update:
+    redirect: am/post/postdiscovertab
+    redirectClose: am/post/postdiscovertab

@@ -1,0 +1,32 @@
+plugin:
+    name: 'am.post::lang.plugin.name'
+    description: 'am.post::lang.plugin.description'
+    author: am
+    icon: oc-icon-text-width
+    homepage: ''
+navigation:
+    posts-menu:
+        label: Posts
+        url: am/post/posttravel
+        icon: icon-pencil
+        sideMenu:
+            travel-post-item:
+                label: 'Travel Post'
+                url: am/post/posttravel
+                icon: icon-globe
+            discover-post-item:
+                label: 'Discover Post'
+                url: am/post/postdiscover
+                icon: icon-file-word-o
+            discover-post-tab-item:
+                label: 'Discover Tab'
+                url: am/post/postdiscovertab
+                icon: icon-th-list
+            discover-tab-content-item:
+                label: 'Discover Tab Content'
+                url: am/post/postdiscovertabcontent
+                icon: icon-sitemap
+            discover-extra-item:
+                label: 'Discover Extra'
+                url: am/post/postdiscoverextra
+                icon: icon-trello

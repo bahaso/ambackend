@@ -15,12 +15,11 @@ class Publication extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('am.Attachments', 'attachments-menu');
+        BackendMenu::setContext('am.Attachments', 'attachments-menu', 'publication-item');
     }
 
     public function formBeforeSave( $model )
     {
-        // $model->slug = str_slug( $model->title, "-");
         $model->category = 'publication';
     }
 

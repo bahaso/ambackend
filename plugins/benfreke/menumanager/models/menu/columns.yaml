@@ -1,0 +1,14 @@
+columns:
+    title:
+        label: 'benfreke.menumanager::lang.modeldata.title'
+        type: text
+        searchable: true
+    url_link:
+        label: 'benfreke.menumanager::lang.modeldata.url'
+        type: text
+        searchable: true
+    post_map_id:
+        label: Article
+        type: text
+        select: title
+        relation: post_map

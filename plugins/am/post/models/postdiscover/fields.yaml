@@ -1,0 +1,33 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    tab_title:
+        label: 'Title Tab Content'
+        span: left
+        type: text
+        commentAbove: 'Title for clickable Content'
+    title_extra:
+        label: 'Title (Extra Content)'
+        span: left
+        type: text
+        commentAbove: 'Title for vertical display content'
+    url_link_extra:
+        label: 'Url link for ( Extra Content )'
+        span: auto
+        type: text
+        commentAbove: 'link in "more >> "'
+    content:
+        label: 'Main Content'
+        size: huge
+        span: full
+        type: richeditor
+        commentAbove: 'Content in top of page'
+    content_bottom:
+        label: 'Content Bottom'
+        size: huge
+        span: full
+        type: richeditor
+        commentAbove: 'Content in bottom of page'
