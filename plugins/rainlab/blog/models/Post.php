@@ -16,6 +16,8 @@ use Carbon\Carbon;
 use Cms\Classes\Page as CmsPage;
 use Cms\Classes\Theme;
 
+use Am\Post\Models\PostMap;
+
 class Post extends Model
 {
     use \October\Rain\Database\Traits\Validation;
@@ -136,6 +138,16 @@ class Post extends Model
             throw new ValidationException([
                'published_at' => Lang::get('rainlab.blog::lang.post.published_validation')
             ]);
+        }
+    }
+
+    public function beforeDelete()
+    {
+        $take_post_map = PostMap::wherePostId($this->id)->wherePostType('rainlab')->first();
+        
+        if( $db_post_map )
+        {
+            $db_post_map->delete();
         }
     }
 
