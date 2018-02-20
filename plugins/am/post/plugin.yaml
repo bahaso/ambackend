@@ -5,28 +5,41 @@ plugin:
     icon: oc-icon-text-width
     homepage: ''
 navigation:
-    posts-menu:
-        label: Posts
-        url: am/post/posttravel
-        icon: icon-pencil
+    discover-post-menu:
+        label: 'Discover Post'
+        url: am/post/postdiscover
+        icon: icon-random
         sideMenu:
-            travel-post-item:
-                label: 'Travel Post'
-                url: am/post/posttravel
-                icon: icon-globe
             discover-post-item:
                 label: 'Discover Post'
                 url: am/post/postdiscover
                 icon: icon-file-word-o
             discover-post-tab-item:
-                label: 'Discover Tab'
+                label: Tab
                 url: am/post/postdiscovertab
                 icon: icon-th-list
             discover-tab-content-item:
-                label: 'Discover Tab Content'
+                label: 'Tab Content'
                 url: am/post/postdiscovertabcontent
                 icon: icon-sitemap
             discover-extra-item:
-                label: 'Discover Extra'
+                label: 'Parallel Post'
                 url: am/post/postdiscoverextra
                 icon: icon-trello
+    faqs-menu:
+        label: Faqs
+        url: am/post/faq
+        icon: icon-connectdevelop
+        sideMenu:
+            faq-item:
+                label: Post
+                url: am/post/faq
+                icon: icon-question-circle
+            side-menu-item:
+                label: Lists
+                url: am/post/faqtab
+                icon: icon-list-ol
+    travel-post-menu:
+        label: 'Travel Post'
+        url: am/post/posttravel
+        icon: icon-globe

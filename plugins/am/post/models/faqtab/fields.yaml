@@ -1,0 +1,19 @@
+fields:
+    faq:
+        label: 'Faq Article'
+        nameFrom: title
+        descriptionFrom: summary
+        span: auto
+        type: relation
+        commentAbove: 'Faq Article to be Linked'
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: left
+        type: text
+    description:
+        label: Description
+        size: giant
+        oc.commentPosition: ''
+        span: full
+        type: richeditor

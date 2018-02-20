@@ -13,6 +13,6 @@ class PostDiscoverExtra extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Am.Post', 'posts-menu', 'discover-extra-item');
+        BackendMenu::setContext('Am.Post', 'discover-post-menu', 'discover-extra-item');
     }
 }

@@ -1,0 +1,11 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+    faq_id:
+        label: 'Faq Article'
+        type: text
+        searchable: true
+        select: title
+        relation: faq

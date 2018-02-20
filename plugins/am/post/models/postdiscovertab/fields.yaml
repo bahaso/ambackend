@@ -10,7 +10,7 @@ fields:
         descriptionFrom: description
         span: left
         type: relation
-        commentAbove: 'Post Title'
+        commentAbove: 'Main Discover Post'
     discoverTabImage:
         label: 'Image Upload'
         oc.commentPosition: ''

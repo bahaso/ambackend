@@ -3,31 +3,32 @@ fields:
         label: Title
         oc.commentPosition: ''
         span: auto
+        required: 1
         type: text
     tab_title:
-        label: 'Title Tab Content'
+        label: 'Title Tab'
         span: left
         type: text
-        commentAbove: 'Title for clickable Content'
+        commentAbove: '2nd layout : Tab Contents'
     title_extra:
-        label: 'Title (Extra Content)'
+        label: 'Title Parallel'
         span: left
         type: text
-        commentAbove: 'Title for vertical display content'
+        commentAbove: '3rd Layout : Parallel Contents'
     url_link_extra:
-        label: 'Url link for ( Extra Content )'
+        label: 'Url link Parallel'
         span: auto
         type: text
-        commentAbove: 'link in "more >> "'
+        commentAbove: '3rd Layout link : Display in "more >> "'
     content:
         label: 'Main Content'
-        size: huge
+        size: giant
         span: full
         type: richeditor
-        commentAbove: 'Content in top of page'
+        commentAbove: 'Top Content of Post'
     content_bottom:
         label: 'Content Bottom'
-        size: huge
+        size: giant
         span: full
         type: richeditor
-        commentAbove: 'Content in bottom of page'
+        commentAbove: 'Bottom Content of Post'

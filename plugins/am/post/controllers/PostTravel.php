@@ -15,7 +15,7 @@ class PostTravel extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Am.Post', 'posts-menu', 'travel-post-item');
+        BackendMenu::setContext('Am.Post', 'travel-post-menu');
     }
 
 
