@@ -3,6 +3,8 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
+use Str;
+
 class PressRelease extends Controller
 {
     public $implement = [        
@@ -18,10 +20,15 @@ class PressRelease extends Controller
         BackendMenu::setContext('am.Attachments', 'attachments-menu', 'press-release-item');
     }
 
-
     public function formBeforeSave( $model )
     {
         $model->category = 'press-release';
+    }
+
+    public function formAfterSave( $model )
+    {
+        $model->slug = Str::slug( $model->title );
+        $model->save(); 
     }
 
     public function listExtendQuery($query)

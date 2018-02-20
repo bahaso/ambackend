@@ -3,6 +3,8 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
+use Str;
+
 class Publication extends Controller
 {
     public $implement = [        
@@ -21,6 +23,12 @@ class Publication extends Controller
     public function formBeforeSave( $model )
     {
         $model->category = 'publication';
+    }
+
+    public function formAfterSave( $model )
+    {
+        $model->slug = Str::slug( $model->title );
+        $model->save(); 
     }
 
     public function listExtendQuery($query)

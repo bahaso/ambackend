@@ -66,3 +66,9 @@
 1.0.23:
     - 'Updated table am_post_faqs'
     - builder_table_update_am_post_faqs.php
+1.0.24:
+    - 'Updated table am_post_discover_extras'
+    - builder_table_update_am_post_discover_extras_2.php
+1.0.25:
+    - 'Updated table am_post_travels'
+    - builder_table_update_am_post_travels_3.php
