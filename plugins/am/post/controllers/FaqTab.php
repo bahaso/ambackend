@@ -3,9 +3,12 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
-class PostDiscoverTab extends Controller
+class FaqTab extends Controller
 {
-    public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
+    public $implement = [        
+	    'Backend\Behaviors\ListController',        
+	    'Backend\Behaviors\FormController'    
+    ];
     
     public $listConfig = 'config_list.yaml';
     public $formConfig = 'config_form.yaml';
@@ -13,6 +16,6 @@ class PostDiscoverTab extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Am.Post', 'discover-post-menu', 'discover-post-tab-item');
+        BackendMenu::setContext('Am.Post', 'faqs-menu', 'side-menu-item');
     }
 }

@@ -1,0 +1,10 @@
+name: Faq
+form: $/am/post/models/faq/fields.yaml
+modelClass: Am\Post\Models\Faq
+defaultRedirect: am/post/faq
+create:
+    redirect: 'am/post/faq/update/:id'
+    redirectClose: am/post/faq
+update:
+    redirect: am/post/faq
+    redirectClose: am/post/faq

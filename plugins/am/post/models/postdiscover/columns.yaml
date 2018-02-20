@@ -3,3 +3,11 @@ columns:
         label: Title
         type: text
         searchable: true
+    tab_title:
+        label: '2nd Layout Tab Title'
+        type: text
+        searchable: true
+    title_extra:
+        label: '3rd Layout Parallel Content'
+        type: text
+        searchable: true

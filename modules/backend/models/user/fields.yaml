@@ -17,16 +17,16 @@ tabs:
             span: left
             label: backend::lang.user.login
 
-        email:
-            span: right
-            label: backend::lang.user.email
+        # email:
+        #     span: right
+        #     label: backend::lang.user.email
 
-        send_invite:
-            context: create
-            type: checkbox
-            label: backend::lang.user.send_invite
-            comment: backend::lang.user.send_invite_comment
-            default: true
+        # send_invite:
+        #     context: create
+        #     type: checkbox
+        #     label: backend::lang.user.send_invite
+        #     comment: backend::lang.user.send_invite_comment
+        #     default: true
 
         first_name:
             span: left

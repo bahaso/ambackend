@@ -10,7 +10,7 @@ fields:
         descriptionFrom: description
         span: left
         type: relation
-        comment: 'Parent Post Content'
+        commentAbove: 'Main Discover Post'
     url_link:
         label: 'Url link'
         oc.commentPosition: ''
@@ -28,7 +28,7 @@ fields:
         type: fileupload
     summary:
         label: Summary
-        size: large
+        size: giant
         oc.commentPosition: ''
         span: left
         type: textarea

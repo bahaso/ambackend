@@ -1,0 +1,10 @@
+name: FaqTab
+form: $/am/post/models/faqtab/fields.yaml
+modelClass: Am\Post\Models\FaqTab
+defaultRedirect: am/post/faqtab
+create:
+    redirect: 'am/post/faqtab/update/:id'
+    redirectClose: am/post/faqtab
+update:
+    redirect: am/post/faqtab
+    redirectClose: am/post/faqtab

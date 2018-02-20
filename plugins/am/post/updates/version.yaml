@@ -57,3 +57,12 @@
 1.0.20:
     - 'Updated table am_post_discover_extra'
     - builder_table_update_am_post_discover_extras.php
+1.0.21:
+    - 'Created table am_post_faqs'
+    - builder_table_create_am_post_faqs.php
+1.0.22:
+    - 'Created table am_post_faq_tabs'
+    - builder_table_create_am_post_faq_tabs.php
+1.0.23:
+    - 'Updated table am_post_faqs'
+    - builder_table_update_am_post_faqs.php

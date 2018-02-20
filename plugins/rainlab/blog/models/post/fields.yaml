@@ -30,7 +30,7 @@ secondaryTabs:
             label: Summary
             size: small
             oc.commentPosition: ''
-            span: left
+            span: auto
             type: textarea
             tab: 'rainlab.blog::lang.post.tab_manage'
         publish_type:
@@ -44,28 +44,16 @@ secondaryTabs:
             tab: 'rainlab.blog::lang.post.tab_manage'
         category_type:
             label: Category
-            oc.commentPosition: ''
             options:
-                about: About
-                events: Events
-                travel-information: 'Travel Information'
                 news: News
                 photo-gallery: 'Photo Gallery'
+            emptyOption: 'Choose Category'
             span: left
             type: dropdown
-            tab: 'rainlab.blog::lang.post.tab_manage'
-        parent:
-            label: 'Parent Article'
-            oc.commentPosition: ''
-            nameFrom: title
-            descriptionFrom: description
-            emptyOption: 'Choose Parent Article'
-            span: left
-            type: relation
+            commentAbove: '[Optional] Selected Category option to show in News / Gallery.'
             tab: 'rainlab.blog::lang.post.tab_manage'
         featured_images:
             label: 'rainlab.blog::lang.post.featured_images'
-            oc.commentPosition: ''
             mode: image
             imageWidth: 200
             imageHeight: 200
@@ -75,4 +63,5 @@ secondaryTabs:
                 extension: auto
             span: left
             type: fileupload
+            commentAbove: 'Thumbnail / Main Image in Content'
             tab: 'rainlab.blog::lang.post.tab_manage'

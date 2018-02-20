@@ -13,6 +13,6 @@ class PostDiscoverTabContent extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Am.Post', 'posts-menu', 'discover-tab-content-item');
+        BackendMenu::setContext('Am.Post', 'discover-post-menu', 'discover-tab-content-item');
     }
 }

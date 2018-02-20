@@ -46,7 +46,7 @@ fields:
         type: fileupload
     content:
         label: Content
-        size: huge
+        size: giant
         oc.commentPosition: ''
         span: full
         type: richeditor

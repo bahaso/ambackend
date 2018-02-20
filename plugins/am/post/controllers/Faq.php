@@ -5,7 +5,7 @@ use BackendMenu;
 
 use Am\Post\Models\PostMap;
 
-class PostDiscover extends Controller
+class Faq extends Controller
 {
     public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
     
@@ -15,12 +15,12 @@ class PostDiscover extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Am.Post', 'discover-post-menu', 'discover-post-item');
+        BackendMenu::setContext('Am.Post', 'faqs-menu', 'faq-item');
     }
 
     public function formAfterSave( $model )
     {
-    	$db_post_map = PostMap::wherePostId( $model->id )->wherePostType( 'discover' )->first();
+    	$db_post_map = PostMap::wherePostId( $model->id )->wherePostType( 'faqs' )->first();
 
     	if( $db_post_map )
     	{
@@ -33,7 +33,7 @@ class PostDiscover extends Controller
     		$db_post_map->title 	= $model->title;
             $db_post_map->slug      = str_slug( $model->title, '-');
     		$db_post_map->post_id 	= $model->id;
-    		$db_post_map->post_type = 'discover';
+    		$db_post_map->post_type = 'faqs';
     		$db_post_map->save();
     	}
     }
