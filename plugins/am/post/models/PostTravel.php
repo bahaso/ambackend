@@ -1,6 +1,7 @@
 <?php namespace Am\Post\Models;
 
 use Model;
+use Am\Post\Models\PostMap;
 
 /**
  * Model
@@ -24,4 +25,14 @@ class PostTravel extends Model
     public $attachOne = [
         'travelImage' => 'System\Models\File'
     ];
+
+    public function beforeDelete()
+    {
+        $db_post_map = PostMap::wherePostId($this->id)->wherePostType('travel')->first();
+
+        if( $db_post_map )
+        {
+            $db_post_map->delete();
+        }
+    }
 }
