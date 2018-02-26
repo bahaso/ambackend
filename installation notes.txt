@@ -17,6 +17,19 @@ BACKEND INSTALLATION
     username: admin
     password: admin
 
+5. Install required library for octobercms:
+https://octobercms.com/docs/setup/installation
+
+October CMS has some server requirements for web hosting:
+
+	- PHP version 7.0 or higher
+	- PDO PHP Extension
+	- cURL PHP Extension
+	- OpenSSL PHP Extension
+	- Mbstring PHP Library
+	- ZipArchive PHP Library
+	- GD PHP Library
+
 
 ==========================
 FRONTEND INSTALLATION
