@@ -28,8 +28,8 @@ scopes:
 
         # SQL Conditions
         conditions:
-            - published <> '1'
-            - published = '1'
+            - publish_type = 'draft'
+            - publish_type = 'publish'
 
     published_date:
 
@@ -40,4 +40,4 @@ scopes:
         type: daterange
 
         # SQL Conditions
-        conditions: created_at >= ':after' AND created_at <= ':before'
+        conditions: published_at >= ':after' AND published_at <= ':before'

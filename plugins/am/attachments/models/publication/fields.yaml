@@ -24,6 +24,7 @@ fields:
         oc.commentPosition: ''
         mode: date
         span: left
+        default: now
         type: datepicker
     datafile:
         label: 'File upload'
