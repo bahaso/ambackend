@@ -33,6 +33,7 @@ class Post extends Model
         'title' => 'required',
         'slug' => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique:rainlab_blog_posts'],
         'content' => 'required',
+        'published_at' => 'required',
         'excerpt' => ''
     ];
 
@@ -337,9 +338,18 @@ class Post extends Model
      */
     public function scopeFilterCategories($query, $categories)
     {
-        return $query->whereHas('categories', function($q) use ($categories) {
-            $q->whereIn('id', $categories);
-        });
+        // return $query->whereHas('categories', function($q) use ($categories) {
+        //     $q->whereIn('name', $categories);
+        // });
+        $category_names = [];
+
+        foreach( $categories as $c )
+        {
+            $obj = Category::find($c);
+            $category_names[] = $obj->name;
+        }
+
+        return $query->whereIn( 'category_type', $category_names);
     }
 
     //

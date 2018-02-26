@@ -33,6 +33,14 @@ secondaryTabs:
             span: auto
             type: textarea
             tab: 'rainlab.blog::lang.post.tab_manage'
+        published_at:
+            label: 'Published At'
+            oc.commentPosition: ''
+            mode: date
+            span: left
+            default: now
+            type: datepicker
+            tab: 'rainlab.blog::lang.post.tab_manage'
         publish_type:
             label: Status
             oc.commentPosition: ''
