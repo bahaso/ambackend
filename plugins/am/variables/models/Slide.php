@@ -19,6 +19,8 @@ class Slide extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'title' => 'required',
+        'img_slide' => 'required'
     ];
 
     /**

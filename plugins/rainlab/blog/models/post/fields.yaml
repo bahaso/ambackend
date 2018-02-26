@@ -45,9 +45,9 @@ secondaryTabs:
         category_type:
             label: Category
             options:
+                article: Article
                 news: News
                 photo-gallery: 'Photo Gallery'
-            emptyOption: 'Choose Category'
             span: left
             type: dropdown
             commentAbove: '[Optional] Selected Category option to show in News / Gallery.'
