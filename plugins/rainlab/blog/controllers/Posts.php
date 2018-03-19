@@ -129,21 +129,21 @@ class Posts extends Controller
         ];
     }
 
-
     /**
      * For articles map in menu
      */
     public function formAfterSave( $model )
     {
-        $db_post_map = PostMap::wherePostId( $model->id )->wherePostType( 'rainlab' )->first();
+        $db_post_map = PostMap::wherePostId( $model->id )->wherePostType( $model->category_type )->first();
 
         if( !$db_post_map )
         {
             $db_post_map = new PostMap;
             $db_post_map->post_id   = $model->id;
-            $db_post_map->post_type = 'rainlab';
         }
 
+        //change post map type
+        $db_post_map->post_type = $model->category_type;
         $db_post_map->title = $model->title;
         $db_post_map->slug  = $model->slug;
         $db_post_map->save();

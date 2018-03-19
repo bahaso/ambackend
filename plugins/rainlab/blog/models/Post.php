@@ -146,7 +146,7 @@ class Post extends Model
 
     public function beforeDelete()
     {
-        $db_post_map = PostMap::wherePostId($this->id)->wherePostType('rainlab')->first();
+        $db_post_map = PostMap::wherePostId($this->id)->wherePostType( $this->category_type )->first();
         
         if( $db_post_map )
         {
