@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         Eloquent::unguard();
 
         $this->call('Backend\Database\Seeds\SeedSetupAdmin');
+        $this->call('Backend\Database\Seeds\SettingSeeder');
     }
 }
