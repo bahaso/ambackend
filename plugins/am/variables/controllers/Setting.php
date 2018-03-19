@@ -2,7 +2,6 @@
 
 use Backend\Classes\Controller;
 use BackendMenu;
-use Am\Post\Models\PostMap;
 
 class Setting extends Controller
 {
@@ -17,20 +16,5 @@ class Setting extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('am.Variables', 'variables-menu', 'settings-item');
-    }
-
-
-
-    public function formAfterSave( $model )
-    {
-        $db_post_map = PostMap::all();
-
-        foreach( $db_post_map as $dp )
-        {
-        	$post_url = sprintf( '%s/article/%s/%s', $model->base_url_link, $dp->id, $dp->slug );
-
-        	$dp->post_url_link = $post_url;
-        	$dp->save();
-        }
     }
 }

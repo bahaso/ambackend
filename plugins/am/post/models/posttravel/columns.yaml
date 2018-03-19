@@ -38,3 +38,4 @@ columns:
         type: text
         select: post_url_link
         relation: post_map
+        clickable: false

@@ -7,6 +7,7 @@ use Backend\Classes\Controller;
 use ApplicationException;
 use RainLab\Blog\Models\Post;
 use Am\Post\Models\PostMap;
+use Am\Variables\Models\Setting;
 
 class Posts extends Controller
 {
@@ -136,25 +137,24 @@ class Posts extends Controller
     {
         $db_post_map = PostMap::wherePostId( $model->id )->wherePostType( 'rainlab' )->first();
 
-        if( $db_post_map )
-        {
-            $db_post_map->title = $model->title;
-            $db_post_map->slug  = $model->slug;
-            $db_post_map->save();
-
-            $model->post_map_id = $db_post_map->id;
-            $model->save();
-        }else
+        if( !$db_post_map )
         {
             $db_post_map = new PostMap;
-            $db_post_map->title     = $model->title;
-            $db_post_map->slug      = $model->slug;
             $db_post_map->post_id   = $model->id;
             $db_post_map->post_type = 'rainlab';
-            $db_post_map->save();
-
-            $model->post_map_id = $db_post_map->id;
-            $model->save();
         }
+
+        $db_post_map->title = $model->title;
+        $db_post_map->slug  = $model->slug;
+        $db_post_map->save();
+
+        $model->post_map_id = $db_post_map->id;
+        $model->save();
+
+        $db_setting = Setting::first();
+        //save link url
+        $db_post_map->post_url_link = $db_setting->setUrlArticle( $db_post_map->id, $db_post_map->slug );
+        $db_post_map->save();
+
     }
 }

@@ -1,6 +1,11 @@
 columns:
     title:
-        label: Title
+        label: Title Menu
+        type: text
+        searchable: true
+        sortable: true
+    title_short:
+        label: Title Content
         type: text
         searchable: true
         sortable: true
@@ -19,3 +24,11 @@ columns:
         type: datetime
         searchable: true
         sortable: true
+    post_map_id:
+        label: 'Post Url Link'
+        type: text
+        searchable: true
+        sortable: true
+        select: post_url_link
+        relation: post_map
+        clickable: false

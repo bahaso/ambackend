@@ -3,7 +3,8 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
-use Str;
+use Am\Post\Models\PostMap;
+use Am\Variables\Models\Setting;
 
 class Publication extends Controller
 {
@@ -25,14 +26,35 @@ class Publication extends Controller
         $model->category = 'publication';
     }
 
-    public function formAfterSave( $model )
-    {
-        $model->slug = Str::slug( $model->title );
-        $model->save(); 
-    }
-
     public function listExtendQuery($query)
     {
         $query->whereCategory('publication');
+    }
+
+    public function formAfterSave( $model )
+    {
+        $model->slug = str_slug( $model->title, '-');
+        $model->save(); 
+        
+        $db_post_map = PostMap::wherePostId( $model->id )->wherePostType( 'publication' )->first();
+
+        if( !$db_post_map )
+        {
+            $db_post_map = new PostMap;
+            $db_post_map->post_id   = $model->id;
+            $db_post_map->post_type = 'publication';
+        }
+
+        $db_post_map->title = $model->title;
+        $db_post_map->slug  = str_slug( $model->title, '-');
+        $db_post_map->save();
+
+        $model->post_map_id = $db_post_map->id;
+        $model->save();
+
+        $db_setting = Setting::first();
+        //save link url
+        $db_post_map->post_url_link = $db_setting->setUrlArticle( $db_post_map->id, $db_post_map->slug );
+        $db_post_map->save();
     }
 }
