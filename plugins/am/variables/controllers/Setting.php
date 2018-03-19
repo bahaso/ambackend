@@ -25,10 +25,9 @@ class Setting extends Controller
     {
         $db_post_map = PostMap::all();
 
-
         foreach( $db_post_map as $dp )
         {
-        	$post_url = sprintf( '%s/post/%s/%s', $model->base_url_link, $dp->id, $dp->slug );
+        	$post_url = sprintf( '%s/article/%s/%s', $model->base_url_link, $dp->id, $dp->slug );
 
         	$dp->post_url_link = $post_url;
         	$dp->save();
