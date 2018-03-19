@@ -3,3 +3,9 @@ columns:
         label: Title
         type: text
         searchable: true
+    post_map_id:
+        label: 'Url Link'
+        type: text
+        searchable: true
+        select: post_url_link
+        relation: post_map

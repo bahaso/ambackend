@@ -3,26 +3,38 @@ columns:
         label: title
         type: text
         searchable: true
+        sortable: true
     population:
         label: Population
         type: text
+        sortable: true
     area:
         label: Area
         type: text
         searchable: true
+        sortable: true
     language:
         label: Language
         type: text
         searchable: true
+        sortable: true
     religion:
         label: Religion
         type: text
         searchable: true
+        sortable: true
     government:
         label: Government
         type: text
         searchable: true
+        sortable: true
     currency:
         label: Currency
         type: text
         searchable: true
+        sortable: true
+    post_map_id:
+        label: 'Post Url Link'
+        type: text
+        select: post_url_link
+        relation: post_map

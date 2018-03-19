@@ -3,11 +3,20 @@ columns:
         label: Title
         type: text
         searchable: true
+        sortable: true
     tab_title:
         label: '2nd Layout Tab Title'
         type: text
         searchable: true
+        sortable: true
     title_extra:
         label: '3rd Layout Parallel Content'
         type: text
         searchable: true
+        sortable: true
+    post_map_id:
+        label: 'Post Url Link'
+        type: text
+        searchable: true
+        select: post_url_link
+        relation: post_map

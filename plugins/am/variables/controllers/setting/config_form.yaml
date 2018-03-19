@@ -1,0 +1,10 @@
+name: Setting
+form: $/am/variables/models/setting/fields.yaml
+modelClass: am\Variables\Models\Setting
+defaultRedirect: am/variables/setting
+create:
+    redirect: 'am/variables/setting/update/:id'
+    redirectClose: am/variables/setting
+update:
+    redirect: am/variables/setting
+    redirectClose: am/variables/setting

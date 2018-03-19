@@ -141,6 +141,9 @@ class Posts extends Controller
             $db_post_map->title = $model->title;
             $db_post_map->slug  = $model->slug;
             $db_post_map->save();
+
+            $model->post_map_id = $db_post_map->id;
+            $model->save();
         }else
         {
             $db_post_map = new PostMap;
@@ -149,6 +152,9 @@ class Posts extends Controller
             $db_post_map->post_id   = $model->id;
             $db_post_map->post_type = 'rainlab';
             $db_post_map->save();
+
+            $model->post_map_id = $db_post_map->id;
+            $model->save();
         }
     }
 }

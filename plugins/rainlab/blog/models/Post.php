@@ -75,6 +75,7 @@ class Post extends Model
      */
     public $belongsTo = [
         'user' => ['Backend\Models\User'],
+        'post_map' => 'Am\Post\Models\PostMap',
         'parent' => [
             'RainLab\Blog\Models\Post',
             'scope' => 'articlesRoot'

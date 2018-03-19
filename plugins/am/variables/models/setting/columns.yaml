@@ -1,0 +1,6 @@
+columns:
+    base_url_link:
+        label: 'Base Url Link'
+        type: text
+        searchable: false
+        sortable: false

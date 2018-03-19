@@ -22,6 +22,10 @@ class PostDiscover extends Model
      */
     public $table = 'am_post_discovers';
 
+    public $belongsTo = [
+        'post_map' => 'Am\Post\Models\PostMap'
+    ];
+
     public function beforeDelete()
     {
         $db_post_map = PostMap::wherePostId($this->id)->wherePostType('discover')->first();

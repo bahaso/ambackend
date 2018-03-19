@@ -19,3 +19,9 @@ columns:
         label: 'rainlab.blog::lang.post.created'
         type: datetime
         invisible: true
+    post_map_id:
+        label: 'Post Url Link'
+        type: text
+        searchable: true
+        select: post_url_link
+        relation: post_map

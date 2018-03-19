@@ -18,3 +18,7 @@ navigation:
                 label: Sponsors
                 url: am/variables/sponsor
                 icon: icon-street-view
+            settings-item:
+                label: Settings
+                url: am/variables/setting
+                icon: icon-link

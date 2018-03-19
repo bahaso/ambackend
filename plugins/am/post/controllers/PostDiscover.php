@@ -27,6 +27,9 @@ class PostDiscover extends Controller
     		$db_post_map->title = $model->title;
             $db_post_map->slug  = str_slug( $model->title, '-');
     		$db_post_map->save();
+            
+            $model->post_map_id = $db_post_map->id;
+            $model->save();
     	}else
     	{
     		$db_post_map = new PostMap;
@@ -35,6 +38,9 @@ class PostDiscover extends Controller
     		$db_post_map->post_id 	= $model->id;
     		$db_post_map->post_type = 'discover';
     		$db_post_map->save();
+            
+            $model->post_map_id = $db_post_map->id;
+            $model->save();
     	}
     }
 }

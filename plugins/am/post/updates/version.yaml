@@ -72,3 +72,21 @@
 1.0.25:
     - 'Updated table am_post_travels'
     - builder_table_update_am_post_travels_3.php
+1.0.26:
+    - 'Updated table am_post_faqs'
+    - builder_table_update_am_post_faqs_2.php
+1.0.27:
+    - 'Updated table am_post_faqs'
+    - builder_table_update_am_post_faqs_3.php
+1.0.28:
+    - 'Updated table am_post_maps'
+    - builder_table_update_am_post_maps_3.php
+1.0.29:
+    - 'Updated table am_post_faqs'
+    - builder_table_update_am_post_faqs_4.php
+1.0.30:
+    - 'Updated table am_post_travels'
+    - builder_table_update_am_post_travels_4.php
+1.0.31:
+    - 'Updated table am_post_discovers'
+    - builder_table_update_am_post_discovers_7.php

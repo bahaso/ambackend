@@ -27,6 +27,10 @@ class PostTravel extends Model
         'travelImage' => 'System\Models\File'
     ];
 
+    public $belongsTo = [
+        'post_map' => 'Am\Post\Models\PostMap'
+    ];
+
     public function beforeDelete()
     {
         $db_post_map = PostMap::wherePostId($this->id)->wherePostType('travel')->first();

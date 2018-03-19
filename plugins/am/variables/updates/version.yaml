@@ -12,3 +12,9 @@
 1.0.5:
     - 'Updated table am_variables_sponsors'
     - builder_table_update_am_variables_sponsors.php
+1.0.6:
+    - 'Created table am_variables_settings'
+    - builder_table_create_am_variables_settings.php
+1.0.7:
+    - 'Updated table am_variables_settings'
+    - builder_table_update_am_variables_settings.php

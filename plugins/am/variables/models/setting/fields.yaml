@@ -1,0 +1,6 @@
+fields:
+    base_url_link:
+        label: 'Base Url Link'
+        span: auto
+        type: text
+        commentAbove: 'Warn! All post external link will be changed to current url'
